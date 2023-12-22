@@ -14,7 +14,7 @@ spec:
   dependsOn:
     - name: vclusters
       namespace: flux-system
-#  kubeConfig:
-#    secretRef:
-#      name: vc-env-dev
-#      key: config
+  kubeConfig:
+    secretRef:
+      name: vc-env-dev
+      key: config
