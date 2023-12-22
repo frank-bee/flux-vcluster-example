@@ -25,3 +25,8 @@ spec:
         name: loft-sh
   install:
     createNamespace: true
+  values:
+    syncer:
+      extraArgs:
+        - --tls-san=env-dev.env-dev.svc.cluster.local
+        - --out-kube-config-server=https://env-dev.env-dev.svc.cluster.local
