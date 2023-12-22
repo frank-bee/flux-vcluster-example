@@ -8,6 +8,7 @@ spec:
   prune: true # remove stale resources from cluster
   sourceRef:
     kind: GitRepository
+    namespace: flux-system
     name: flux-system
   path: "./env/dev"
   dependsOn:
