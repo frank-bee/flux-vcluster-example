@@ -1,0 +1,20 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: env-qa
+  namespace: env-qa
+spec:
+  interval: 10m0s
+  prune: true # remove stale resources from cluster
+  sourceRef:
+    kind: GitRepository
+    namespace: flux-system
+    name: flux-system
+  path: "./env/qa"
+  dependsOn:
+    - name: vclusters
+      namespace: flux-system
+  kubeConfig:
+    secretRef:
+      name: vc-env-qa
+      key: config
