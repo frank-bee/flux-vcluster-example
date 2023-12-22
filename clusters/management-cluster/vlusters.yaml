@@ -10,3 +10,4 @@ spec:
     kind: GitRepository
     name: flux-system
   path: "./vclusters"
+  wait: true

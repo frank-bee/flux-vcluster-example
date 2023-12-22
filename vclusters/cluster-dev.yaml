@@ -7,7 +7,6 @@ spec:
   interval: 1m
   releaseName: env-dev
   targetNamespace: env-dev
-  wait: true
   chart:
     spec:
       chart: vcluster-eks

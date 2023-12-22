@@ -7,7 +7,6 @@ spec:
   interval: 1m
   releaseName: env-qa
   targetNamespace: env-qa
-  wait: true
   chart:
     spec:
       chart: vcluster-eks
