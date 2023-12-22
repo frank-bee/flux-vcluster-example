@@ -1,12 +1,3 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
-metadata:
-  name: loft-sh
-  namespace: flux-system
-spec:
-  interval: 30m
-  url: https://charts.loft.sh
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
