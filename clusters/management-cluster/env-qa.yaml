@@ -10,7 +10,7 @@ spec:
     kind: GitRepository
     namespace: flux-system
     name: flux-system
-  path: "./env/qa"
+  path: "./vcluster-template"
   dependsOn:
     - name: vclusters
       namespace: flux-system
@@ -18,3 +18,6 @@ spec:
     secretRef:
       name: vc-env-qa
       key: config
+  postBuild:
+    substitute:
+      env: dev
