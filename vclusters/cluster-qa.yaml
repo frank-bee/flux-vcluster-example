@@ -1,12 +1,13 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: env-dev
+  name: env-qa
   namespace: flux-system
 spec:
   interval: 1m
-  releaseName: env-dev
-  targetNamespace: env-dev
+  releaseName: env-qa
+  targetNamespace: env-qa
+  wait: true
   chart:
     spec:
       chart: vcluster-eks
@@ -19,5 +20,5 @@ spec:
   values:
     syncer:
       extraArgs:
-        - --tls-san=env-dev.env-dev.svc.cluster.local
-        - --out-kube-config-server=https://env-dev.env-dev.svc.cluster.local
+        - --tls-san=env-qa.env-qa.svc.cluster.local
+        - --out-kube-config-server=https://env-qa.env-qa.svc.cluster.local
