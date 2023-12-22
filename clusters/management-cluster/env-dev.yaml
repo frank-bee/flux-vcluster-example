@@ -13,6 +13,7 @@ spec:
   path: "./env/dev"
   dependsOn:
     - name: vclusters
+      namespace: flux-system
   kubeConfig:
     secretRef:
       name: vc-env-dev
