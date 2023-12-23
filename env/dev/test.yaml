@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: perpetual-pod
+  name: test
 spec:
   replicas: 1
   selector:
