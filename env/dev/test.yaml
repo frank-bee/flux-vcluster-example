@@ -1,4 +1,18 @@
-kind: Namespace
-apiVersion: v1
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: test
+  name: perpetual-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: perpetual
+  template:
+    metadata:
+      labels:
+        app: perpetual
+    spec:
+      containers:
+        - name: forever-running-container
+          image: alpine
+          command: ["/bin/sh", "-c", "while true; do sleep 3600; done"]
