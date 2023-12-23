@@ -5,7 +5,6 @@ metadata:
   namespace: env-dev
 spec:
   interval: 10m0s
-  prune: true # remove stale resources from cluster
   sourceRef:
     kind: GitRepository
     namespace: flux-system
