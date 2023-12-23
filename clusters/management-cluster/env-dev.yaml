@@ -16,5 +16,5 @@ spec:
       namespace: flux-system
   kubeConfig:
     secretRef:
-      name: env-dev
+      name: vc-env-dev
       key: config
