@@ -3,18 +3,3 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-#patches:
-#  - patch: |
-#      - op: add
-#        path: /spec/template/spec/containers/0/args/-
-#        value: --insecure-kubeconfig-tls
-#    target:
-#      kind: Deployment
-#      name: helm-controller
-#  - patch: |
-#      - op: add
-#        path: /spec/template/spec/containers/0/args/-
-#        value: --insecure-kubeconfig-tls
-#    target:
-#      kind: Deployment
-#      name: kustomize-controller
