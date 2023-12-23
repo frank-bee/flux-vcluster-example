@@ -16,5 +16,5 @@ spec:
       namespace: flux-system
   kubeConfig:
     secretRef:
-      name: env-prod-access
+      name: vc-env-prod
       key: config
