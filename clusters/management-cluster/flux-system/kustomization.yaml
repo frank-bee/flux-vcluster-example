@@ -8,3 +8,6 @@ patches:
       - op: add
         path: /spec/template/spec/containers/0/args/-
         value: --insecure-kubeconfig-tls
+    target:
+      kind: Deployment
+      name: helm-controller
